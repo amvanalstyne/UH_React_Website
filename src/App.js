@@ -92,6 +92,16 @@ const Problem = () => (
             <strong>Low Return for Creators:</strong> Musicians see a significant decrease in 
             revenue—up to 40x—when comparing free streaming models to paid ones (Aly-Tovar et al. 2019).
           </li>
+          <li style={{ marginBottom: '10px' }}>
+            <strong>The Royalty Disconnect:</strong> Pro-rata models often distribute fees 
+            based on total market share rather than individual listener behavior, funneling 
+            fan money to artists they don't even listen to (Johansson 2023).
+          </li>
+          <li style={{ marginBottom: '10px' }}>
+            <strong>Devaluation of Art:</strong> Unlimited access for a flat rate has 
+            lowered the perceived "per-unit" value of music, making it harder to sell 
+            individual downloads or copies (Happonen 2016).
+          </li>
         </ul>
       </div>
     </div>
@@ -141,6 +151,24 @@ const Solution = () => (
           financial contributions and merchandise, to make a reasonable living (Happonen 2016).
         </p>
       </div>
+        <div style={styles.card}>
+          <h3>Direct-to-Fan</h3>
+          <p>
+            Using platforms with higher profit margins, like Bandcamp or personal webstores, ensures more funds reach the artist directly.
+          </p>
+        </div>
+        <div style={styles.card}>
+          <h3>Ethical Consumerism</h3>
+          <p>
+            Switching from free tiers to paid subscriptions can increase the revenue generated for artists by up to 40x per stream (Aly-Tovar et al. 2019).
+          </p>
+        </div>
+        <div style={styles.card}>
+          <h3>Social Advocacy</h3>
+          <p>
+            Sharing an artist's work and educating others on streaming realities helps shift the "habitual" behavior of young adults toward intentional support (Díaz-Marcos et al. 2025).
+          </p>
+        </div>
     </div>
     <footer style={{ marginTop: '50px', fontSize: '0.8rem', color: '#888', borderTop: '1px solid #eee', paddingTop: '20px' }}>
       <p>Alex Van Alstyne | Honors College | University of Alabama</p>
@@ -155,6 +183,7 @@ const Bibliography = () => (
       alt="Library books" 
       style={styles.heroImage} 
     />
+    <div style={styles.hero}>
     <h2 style={styles.subTitle}>References</h2>
     <div style={{ ...styles.text, textAlign: 'left', fontSize: '0.9rem' }}>
       <p style={styles.bibItem}>
@@ -181,6 +210,7 @@ const Bibliography = () => (
       <p style={styles.bibItem}>
         Wlömert, N., & Papies, D. (2016). On-demand streaming services and music industry revenues – Insights from Spotify's market entry. <em>International Journal of Research in Marketing</em>, 33(2), 314-327. https://www.sciencedirect.com/science/article/abs/pii/S0167811615001226 
       </p>
+    </div>
     </div>
     <footer style={{ marginTop: '50px', fontSize: '0.8rem', color: '#888', borderTop: '1px solid #eee', paddingTop: '20px' }}>
       <p>Alex Van Alstyne | Honors College | University of Alabama</p>
@@ -210,11 +240,13 @@ export default function App() {
 const styles = {
   appBody: { 
     fontFamily: '"Times New Roman", Times, serif',
-    color: '#333', 
-    lineHeight: '1.6' 
+    color: '#3d3935', // Soft Charcoal instead of pure #333
+    lineHeight: '1.6',
+    backgroundColor: '#EDEAE0', // Your Alabaster White
+    minHeight: '100vh'
   },
   nav: { 
-    background: '#2c3e50', 
+    background: '#4a4540', // Deep Warm Taupe (matches Alabaster better than blue-grey)
     padding: '1rem',
     display: 'flex',
     justifyContent: 'center'
@@ -227,27 +259,31 @@ const styles = {
     alignItems: 'center'
   },
   navLink: { 
-    color: 'white', 
+    color: '#EDEAE0', // Alabaster links on dark nav
     textDecoration: 'none', 
     fontWeight: 'bold',
     fontSize: '1.1rem',
     fontFamily: '"Times New Roman", Times, serif'
   },
   page: { padding: '40px', maxWidth: '800px', margin: '0 auto', textAlign: 'center' },
-  hero: { backgroundColor: '#f4f4f4', padding: '50px', borderRadius: '10px' },
+  hero: { 
+    backgroundColor: '#e2dfd5', // Slightly darker shade of Alabaster for depth
+    padding: '50px', 
+    borderRadius: '10px' 
+  },
   title: { 
     fontSize: '2.5rem', 
     marginBottom: '20px', 
-    color: 'black'
+    color: '#1a1817' // Soft Black
   },
   subTitle: { 
     fontSize: '2rem', 
-    color: 'black',
+    color: '#1a1817',
     marginBottom: '20px'
   },
-  description: { fontSize: '1.2rem', color: '#666' },
+  description: { fontSize: '1.2rem', color: '#5e5954' },
   text: { fontSize: '1.1rem', marginTop: '20px' },
-  content: { marginTop: '20px' },
+  content: { marginTop: '0px' }, // Removed top margin to keep nav flush
   grid: { 
     display: 'grid', 
     gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
@@ -256,9 +292,9 @@ const styles = {
   },
   card: { 
     padding: '20px', 
-    border: '1px solid #ddd', 
+    border: '1px solid #d1ccc0', 
     borderRadius: '8px',
-    backgroundColor: '#fff'
+    backgroundColor: '#f5f3ef' // Off-white card background
   },
   bibItem: {
     marginBottom: '18px',
@@ -274,6 +310,13 @@ const styles = {
     objectFit: 'cover',
     borderRadius: '10px',
     marginBottom: '30px',
-    boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+    boxShadow: '0 4px 12px rgba(0,0,0,0.08)' // Softer shadow for the new palette
   },
+  footer: { 
+    marginTop: '50px', 
+    fontSize: '0.8rem', 
+    color: '#7a736a', 
+    borderTop: '1px solid #d1ccc0', 
+    paddingTop: '20px' 
+  }
 };
